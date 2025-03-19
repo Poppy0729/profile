@@ -1,11 +1,34 @@
 // ./src/style/variables.scss
 
 $button-height: 40px;
-$body-font-family: "THSarabun", sans-serif;
+$body-font-family: "RobotoCondensed";
 $background-color: #f5f5f5;
 $primary-color: #FFD400;
 $active-color: #1094FB;
 
+@font-face {
+  font-family: $body-font-family;
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(@/assets/fonts/RobotoCondensed-Light.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: $body-font-family;
+  font-style: bold;
+  font-weight: 500;
+  font-display: swap;
+  src: url(@/assets/fonts/RobotoCondensed-Bold.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: $body-font-family;
+  font-style: bold;
+  font-weight: 700;
+  font-display: swap;
+  src: url(@/assets/fonts/RobotoCondensed-Bold.ttf) format('truetype');
+}
 
 $typoOptions: text-h1, text-sm-h1, text-md-h1, text-lg-h1, text-h2, text-sm-h2,
   text-md-h2, text-lg-h2, text-h3, text-sm-h3, text-md-h3, text-lg-h3, text-h4,

@@ -5,7 +5,7 @@
           <v-card class="article-card">
             <v-img :src="article.image" height="200px" cover></v-img>
             <v-card-text>
-              <p class="author">{{ article.author }}</p>
+              <!-- <p class="author">{{ article.author }}</p> -->
               <h3 class="title">{{ article.title }}</h3>
               <p class="description">{{ article.description }}</p>
             </v-card-text>

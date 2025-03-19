@@ -4,8 +4,8 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        display: ['THSarabun'],
-        body: 'THSarabun'
+        display: ['RobotoCondensed'],
+        body: 'RobotoCondensed'
       },
       colors: {
         primary: 'red',

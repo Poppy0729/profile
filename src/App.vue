@@ -1,7 +1,13 @@
 <script setup lang="ts">
-import { onMounted, onUnmounted } from 'vue';
+import SideBar from './components/AppBar.vue'
+import { computed, onMounted, onUnmounted, ref } from 'vue';
 import { VERSION } from './constants/constant';
 import LoadingComponent from './components/LoadingComponent.vue';
+import { RouterName } from './types/enum/router_name';
+import router from './router';
+
+const isShowSideBar = computed(() => RouterName.NotFound !== router.currentRoute.value.name 
+&& RouterName.Dashboard !== router.currentRoute.value.name);
 
 onMounted(() => {
   console.log(import.meta.env.MODE)
@@ -12,7 +18,7 @@ onMounted(() => {
 <template>
   <v-app id="app" theme='light'>
     <v-main>
-      <!-- <SideBar v-if="isShowSideBar"></SideBar> -->
+      <SideBar v-if="isShowSideBar"></SideBar>
       <LoadingComponent />
       <router-view />
     </v-main>
