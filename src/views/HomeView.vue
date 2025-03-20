@@ -1,5 +1,9 @@
 <template>
-    <div id="main" class="tw-h-screen tw-w-screen pt-6">
+    <div id="main" class="tw-h-screen tw-w-screen">
+      <div class="pt-6 pb-6" style="background-color: white; height:500px;">
+        <h2 class="featured-title">Hello, I'm</h2>
+        <h1 class="featured-title">Saowalak Rungrat</h1>
+      </div>
       <h2 class="featured-title">Development Categories</h2>
       <ListItem/>
       <h2 class="featured-title">Application Development</h2>

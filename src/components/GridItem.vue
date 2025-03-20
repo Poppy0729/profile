@@ -1,5 +1,5 @@
 <template>
-    <v-container>
+    <v-container style="max-width: 1000px;">
       <v-row>
         <v-col v-for="article in articles" :key="article.id" cols="12" sm="6" md="4">
           <v-card class="article-card">
@@ -9,11 +9,11 @@
               <h3 class="title">{{ article.title }}</h3>
               <p class="description">{{ article.description }}</p>
             </v-card-text>
-            <v-card-actions>
+            <v-card-actions>              
+              <v-spacer></v-spacer>
               <v-icon>mdi-eye</v-icon>
               <span>{{ article.views }}</span>
-              <v-spacer></v-spacer>
-              <v-icon>mdi-heart-outline</v-icon>
+              <!-- <v-icon>mdi-heart-outline</v-icon> -->
             </v-card-actions>
           </v-card>
         </v-col>
@@ -80,6 +80,7 @@
     border: 1px solid #4a148c;
     border-radius: 10px;
     transition: transform 0.3s;
+    /* max-width: 300px; */
   }
   
   .article-card:hover {

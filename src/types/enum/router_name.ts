@@ -5,6 +5,7 @@ export enum RouterName {
     Web = "web",
     Backend = "backend",
     Integration = "integration",
+    Experience = "experience",
     NotFound = "not-found",
   }
   
@@ -15,5 +16,6 @@ export const getRedirectUrl: Record<RouterName, string> = {
     [RouterName.Web]: '/web',
     [RouterName.Backend]: '/backend',
     [RouterName.Integration]: '/integration',
+    [RouterName.Experience]: '/experience',
     [RouterName.NotFound]: "/:pathMatch(.*)*"
 }

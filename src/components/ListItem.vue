@@ -27,9 +27,9 @@ import { ref } from 'vue';
 const items = ref([
     { id: 1, image: 'https://developer.apple.com/swift/images/swift-og.png', title: 'Mobile', description: 'Mobile native iOS development framework that allows you to build apps for iOS and publish them to the App Store.' },
     { id: 2, image: 'https://static-00.iconduck.com/assets.00/flutter-icon-2048x2048-ufx4idi8.png', title: 'Flutter', description: 'Cross-platform mobile development framework that allows you to build apps for multiple platforms using a single codebase.' },
-    { id: 3, image: 'https://source.unsplash.com/100x100/?building', title: 'Backend', description: 'Describe the item and include any relevant details. Click to edit the text.' },
-    { id: 4, image: 'https://source.unsplash.com/100x100/?design', title: 'Interagation', description: 'Describe the item and include any relevant details. Click to edit the text.' },
-    { id: 5, image: 'https://source.unsplash.com/100x100/?minimal', title: 'Web', description: 'Describe the item and include any relevant details. Click to edit the text.' },
+    { id: 3, image: 'https://verpex.com/assets/uploads/images/blog/How-to-become-a-Backend-Developer.jpg?v=1665484477', title: 'Backend', description: 'Describe the item and include any relevant details. Click to edit the text.' },
+    { id: 4, image: 'https://andrewevans.dev/images/PLAYWRIGHT.png', title: 'Interagation', description: 'Describe the item and include any relevant details. Click to edit the text.' },
+    { id: 5, image: 'https://s3-cdn.cmlabs.co/page/2023/10/04/web-developer-definition-skills-and-responsibilities-908401.png', title: 'Web', description: 'Describe the item and include any relevant details. Click to edit the text.' },
 ]);
 </script>
 
