@@ -30,9 +30,9 @@ export const menuCategories: Record<Menu, RouterName[]> = {
 
 export const menuIcon: Record<Menu, string> = {
     [Menu.Mobile]: "mdi-cellphone",
-    [Menu.Web]: "mdi-web",
-    [Menu.Flutter]: "mdi-flutter",
-    [Menu.Backend]: "mdi-server",
-    [Menu.Integration]: "mdi-account-switch",
+    [Menu.Web]: "mdi-web-check",
+    [Menu.Flutter]: "mdi-monitor-cellphone",
+    [Menu.Backend]: "mdi-server-security",
+    [Menu.Integration]: "mdi-ab-testing",
     [Menu.Experience]: "mdi-account-switch"
 }

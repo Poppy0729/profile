@@ -6,8 +6,7 @@ import LoadingComponent from './components/LoadingComponent.vue';
 import { RouterName } from './types/enum/router_name';
 import router from './router';
 
-const isShowSideBar = computed(() => RouterName.NotFound !== router.currentRoute.value.name 
-&& RouterName.Dashboard !== router.currentRoute.value.name);
+const isShowSideBar = computed(() => RouterName.NotFound !== router.currentRoute.value.name);
 
 onMounted(() => {
   console.log(import.meta.env.MODE)

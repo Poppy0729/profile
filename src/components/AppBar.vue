@@ -1,5 +1,7 @@
 <template>
-    <v-navigation-drawer v-model="drawer" class="tw-border-transparent tw-shadow-lg" permanent :rail="rail"
+    <v-navigation-drawer 
+    v-if="isShowSideBar"
+    v-model="drawer" class="tw-border-transparent tw-shadow-lg" permanent :rail="rail"
         @click="rail = false">
         <v-list-item prepend-avatar="https://randomuser.me/api/portraits/men/85.jpg" title="John Leider" nav>
             <template v-slot:append>
@@ -31,20 +33,35 @@
             </template>
         </v-list>
     </v-navigation-drawer>
+    <v-app-bar style="padding: 3px 12px 10px 12px; color: #4a148c;" class="px-4"
+    scroll-behavior="hide"
+    >
+        <template v-slot:append>
+            <v-btn density="compact" @click="router.push({name: RouterName.Dashboard})">Home</v-btn>
+            <v-btn density="compact" @click="router.push({name: RouterName.About})">About Me</v-btn>
+            <v-btn density="compact" @click="router.push({name: RouterName.Experience})">Experience</v-btn>
+        </template>
+    </v-app-bar>
 </template>
 
 <script setup lang="ts">
 import { useRouter } from 'vue-router'
-import { onMounted, reactive, ref } from 'vue'
+import { computed, onMounted, ref } from 'vue'
 import '@/styles/main.scss'
-import { VERSION } from '@/constants/constant';
 import type { Appbar } from '@/types/common';
 import { menuList } from '@/constants/menu_list';
 import { menuRouteName, menuIcon } from '@/types/enum/menu';
+import { RouterName } from '@/types/enum/router_name';
+const isShowSideBar = computed(() => RouterName.Dashboard !== router.currentRoute.value.name);
 
 const router = useRouter()
 const drawer = ref(true)
 const rail = ref(true)
+
+const scrollInvoked = ref(0)
+function onScroll () {
+scrollInvoked.value++
+}
 
 const menuActionClick = (item: Appbar) => {
     router.push({
@@ -62,7 +79,7 @@ onMounted(() => {
 
 .v-app-bar,
 .v-main {
-    background: v.$background-color !important;
+    background: white !important;
     box-shadow: none !important;
 }
 </style>
