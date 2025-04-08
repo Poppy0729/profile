@@ -7,7 +7,7 @@
         </p>
         <v-row>
             <v-col v-for="item in items" :key="item.id" cols="12" sm="6" md="4" class="d-flex justify-center">
-                <v-card class="item-card" flat color="transparent">
+                <v-card class="item-card" flat color="transparent" @click="router.push({ name: RouterName.Mobile })">
                     <v-avatar size="100">
                         <v-img :src="item.image"></v-img>
                     </v-avatar>
@@ -22,6 +22,8 @@
 </template>
 
 <script setup lang="ts">
+import router from '@/router';
+import { RouterName } from '@/types/enum/router_name';
 import { ref } from 'vue';
 
 const items = ref([
@@ -34,16 +36,6 @@ const items = ref([
 </script>
 
 <style scoped>
-.list-description {
-  font-size: 1rem;
-  color: #555;
-  text-align: center;
-  margin-bottom: 30px;
-  max-width: 600px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
 .item-card {
   text-align: center;
   padding: 10px;

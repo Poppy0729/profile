@@ -1,5 +1,5 @@
 <template>
-  <div id="main" class="tw-h-screen tw-w-screen" style="background-color: white;">
+  <div id="main" style="background-color: white;">
     <v-parallax :src="backgroundImage" height="600">
       <v-row justify="start">
         <v-col >
@@ -27,21 +27,6 @@ import backgroundImage from '@/assets/images/bg.jpg'
 </script>
 
 <style scoped>
-.featured-title {
-  font-size: 2rem;
-  font-weight: bold;
-  color: #4a148c;
-  text-align: center;
-  margin-bottom: 20px;
-}
-
-.top-title {
-  font-size: 2rem;
-  font-weight: bold;
-  color: #4a148c;
-  text-align: left;
-}
-
 .desc {
   font-size: 15px;
   font-weight: normal;

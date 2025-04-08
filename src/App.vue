@@ -1,5 +1,6 @@
 <script setup lang="ts">
-import SideBar from './components/AppBar.vue'
+import SideBar from './components/AppBar.vue';
+import Footer from './components/Footer.vue';
 import { computed, onMounted, onUnmounted, ref } from 'vue';
 import { VERSION } from './constants/constant';
 import LoadingComponent from './components/LoadingComponent.vue';
@@ -21,6 +22,7 @@ onMounted(() => {
       <LoadingComponent />
       <router-view />
     </v-main>
+    <Footer></Footer>
   </v-app>
 </template>
 

@@ -5,15 +5,14 @@
           <v-card class="article-card">
             <v-img :src="article.image" height="200px" cover></v-img>
             <v-card-text>
-              <!-- <p class="author">{{ article.author }}</p> -->
               <h3 class="title">{{ article.title }}</h3>
               <p class="description">{{ article.description }}</p>
             </v-card-text>
             <v-card-actions>              
-              <v-spacer></v-spacer>
-              <v-icon>mdi-eye</v-icon>
-              <span>{{ article.views }}</span>
-              <!-- <v-icon>mdi-heart-outline</v-icon> -->
+              <div class="d-flex justify-center ga-2">
+                <v-chip color="primary" variant="tonal">Swift</v-chip>
+                <v-chip color="primary" variant="tonal">Flutter</v-chip>
+              </div>
             </v-card-actions>
           </v-card>
         </v-col>
@@ -77,10 +76,11 @@
 <style scoped>
 
   .article-card {
-    border: 1px solid #4a148c;
+    border: 1px solid rgb(197, 194, 194);
     border-radius: 10px;
     transition: transform 0.3s;
     /* max-width: 300px; */
+    min-height: 100%;
   }
   
   .article-card:hover {
