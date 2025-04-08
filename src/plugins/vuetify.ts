@@ -27,7 +27,7 @@ export const vuetify = createVuetify({
             light: {
                 colors: {
                     greenish: '#1094FB',
-                    background: "#f5f5f5",
+                    background: "#FFFFFF",
                     accent: "#3D87E4",
                     surface: '#FFFFFF',
                     primary: '#4a148c',

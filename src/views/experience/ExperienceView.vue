@@ -28,6 +28,7 @@
           </v-card>
         </v-timeline-item>
       </v-timeline>
+      <h1 class="featured-title pt-10">My Approach</h1>
     </v-container>
   </div>
 </template>

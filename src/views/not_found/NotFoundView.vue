@@ -1,5 +1,5 @@
 <template>
-    <v-container fill-height fluid>
+    <v-container fluid style="height: max-content;" class="mx-auto">
       <v-row align="center" justify="center" style="color: #4a148c; padding-top: 15%;">
         <v-col class="text-center d-flex flex-column align-center" justify="center">
             <span class="text-h1 font-weight-bold" style="letter-spacing: 44px !important; max-width: 260px; ">404</span>

@@ -3,8 +3,9 @@ import { createRouter, createWebHistory, type RouteRecordRaw } from 'vue-router'
 import HomeView from '@/views/HomeView.vue'
 import NotFoundView from '@/views/not_found/NotFoundView.vue'
 import MobileView from '@/views/mobile/MobileView.vue'
-import ExperienceView from '@/views/experience/ExperienceView.vue'
 import About from '@/views/about/AboutView.vue'
+import ExperienceView from '@/views/experience/ExperienceView.vue'
+import AppDetailView from '@/views/app_detail/AppDetailView.vue'
 
 const routes: Array<RouteRecordRaw> = [
   {
@@ -46,6 +47,11 @@ const routes: Array<RouteRecordRaw> = [
     path: getRedirectUrl[RouterName.About],
     name: RouterName.About,
     component: About,
+  },
+  {
+    path: getRedirectUrl[RouterName.AppDetail],
+    name: RouterName.AppDetail,
+    component: AppDetailView,
   },
   {
     path: getRedirectUrl[RouterName.NotFound],

@@ -33,7 +33,7 @@
     </template>
 </v-list>
 </v-navigation-drawer> -->
-    <v-app-bar :elevation="10" style="color: #4a148c;" class="px-4">
+    <v-app-bar class="px-4">
         <template v-slot:prepend>
             <v-btn density="compact" @click="router.push({ name: RouterName.Dashboard })">Portfolio</v-btn>
         </template>
@@ -110,7 +110,10 @@ onMounted(() => {
 
 .v-app-bar,
 .v-main {
+    color: v.$primary-color !important;
     background: white !important;
-    box-shadow: none !important;
+    box-shadow: 0 1px 2px 0 rgb(0 0 0 / .05) !important;
+    padding-left: 7% !important;
+    padding-right: 7% !important;
 }
 </style>
