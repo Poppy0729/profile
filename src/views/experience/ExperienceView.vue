@@ -5,7 +5,7 @@
       <v-timeline align="start">
         <v-timeline-item v-for="(year, i) in years" :key="i" :dot-color="year.color" size="small">
           <template v-slot:opposite>
-            <span>Buzzebees</span>
+            <span>Company name</span>
             <div :class="`pt-1 headline font-weight-bold text-${year.color}`" v-text="year.year"></div>
           </template>
           <v-card class="tw-shadow-lg custom-card">
