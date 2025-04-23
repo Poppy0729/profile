@@ -9,7 +9,7 @@
         </v-avatar>
       </v-col>
       <v-col cols="12" md="8">
-        <h2 class="text-h5 font-weight-bold mb-2">ชื่อป๊อบชอบกินปังเย็น NJ</h2>
+        <h2 class="text-h5 font-weight-bold mb-2">Saowalak Rungrat</h2>
         <h3 class="text-body-1 mb-4" style="color: #00AEEF;">Senior Mobile Developer</h3>
         <p class="text-body-1 mb-4">
           I am a passionate mobile developer with over 5 years of experience creating innovative applications for iOS
@@ -23,49 +23,60 @@
       <v-card variant="outlined" class="pa-4 custom-card">
         <h3 class="text-body-1 font-weight-bold mb-1">Master of Computer Science</h3>
         <div class="text-blue mb-1">Naresuan University</div>
-        <div class="text-body-2 mb-2">2015 - 2017</div>
-        <div class="text-body-2">
+        <div class="text-body-2 mb-2">2017 - 2019</div>
+        <!-- <div class="text-body-2">
           Specialized in Mobile Computing and Human-Computer Interaction. Graduated with honors and completed thesis on
           mobile app performance optimization.
-        </div>
+        </div> -->
       </v-card>
     </v-col>
     <v-col cols="12" md="12">
       <v-card variant="outlined" class="pa-4 custom-card">
         <h3 class="text-body-1 font-weight-bold mb-1">Bachelor of Computer Science</h3>
         <div class="text-blue mb-1">Naresuan University</div>
-        <div class="text-body-2 mb-2">2011 - 2015</div>
-        <div class="text-body-2">
+        <div class="text-body-2 mb-2">2013 - 2016</div>
+        <!-- <div class="text-body-2">
           Focused on software development methodologies and mobile application development. Participated in several
           hackathons and won Best Mobile App award.
-        </div>
+        </div> -->
       </v-card>
     </v-col>
     <v-col cols="12" md="12">
       <v-card variant="outlined" class="pa-4 custom-card">
         <h3 class="text-body-1 font-weight-bold mb-1">High School</h3>
         <div class="text-blue mb-1">Nakhonsawan School</div>
-        <div class="text-body-2 mb-2">2011 - 2015</div>
-        <div class="text-body-2">
-          Focused on software development methodologies and mobile application development. Participated in several
-          hackathons and won Best Mobile App award.
-        </div>
+        <div class="text-body-2 mb-2">2010 - 2012</div>
       </v-card>
     </v-col>
 
     <!-- Tags -->
     <h1 class="font-weight-bold mt-10" style="font-size: 25px;">Skills</h1>
     <div class="d-flex flex-wrap gap-2">
-      <v-chip color="primary" variant="tonal">React Native</v-chip>
-      <v-chip color="primary" variant="tonal">Flutter</v-chip>
-      <v-chip color="primary" variant="tonal">Swift</v-chip>
-      <v-chip color="primary" variant="tonal">Kotlin</v-chip>
-      <v-chip color="primary" variant="tonal">JavaScript</v-chip>
-      <v-chip color="primary" variant="tonal">TypeScript</v-chip>
+      <template v-for="skill in skills" :key="skill">
+        <v-chip color="primary" variant="tonal">
+          {{ skill }}
+        </v-chip>
+      </template>
+    </div>
+
+    <div>
+      <h1 class="font-weight-bold mt-10" style="font-size: 25px;">Speaker</h1>
+      <ui>
+        <li>The 11th International Conference On Knowledge And Smart Technology
+          (KST), Jan 23 - 26, 2019</li>
+        <li>Tech Together on 30 Oct 2018 about develop application Thai language
+          skill for primary school</li>
+        <li>Ratchasuda International Conference on Disability, Jul 26 2017</li>
+        <li>The 9th National Science Research Conference, May 25-26 2017</li>
+      </ui>
     </div>
 
     <h1 class="font-weight-bold mt-10" style="font-size: 25px;">Honers and Awards</h1>
-
+    <ui>
+      <li>Women Hackathon (Unesco-Microsoft Hack for Asian culture of Peace):
+        2018</li>
+      <li>Semi Final Round the nineteen National Software Contest: NSC 2017</li>
+    </ui>
 
     <div class="tw-text-center">
       <h1 class="font-weight-bold mt-10" style="font-size: 25px;">My Approach</h1>
@@ -93,7 +104,13 @@
 
 <script setup lang="ts">
 import img from "@/assets/images/profile.jpg";
-
+const skills = [
+'Swift', 'RxSwift', 'Bitbucket', 'Kanban', 'CocoaPods', 'Fastlane',
+'Flutter', 'Python',
+  'JavaScript', 
+  'TypeScript', 'Vue',
+  'PHP Laravel', 'HTML','Core Animation','Firebase', 'Realm', 'Third-party login'
+] 
 const approaches = [
   {
     icon: 'mdi-lightbulb-outline',
