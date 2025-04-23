@@ -49,7 +49,7 @@ const routes: Array<RouteRecordRaw> = [
     component: About,
   },
   {
-    path: getRedirectUrl[RouterName.AppDetail],
+    path: getRedirectUrl[RouterName.AppDetail] + '/:id',
     name: RouterName.AppDetail,
     component: AppDetailView,
   },

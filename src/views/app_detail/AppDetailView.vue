@@ -1,16 +1,16 @@
 <template>
-    <v-container>
+    <v-container v-if ="article">
         <v-btn variant="outlined" prepend-icon="mdi-arrow-left" class="mb-6" @click="goBack"
             style="border-color: #e2e8f0;">
             Back to Projects
         </v-btn>
-        <v-row>
+        <v-row >
             <v-col cols="12" md="7">
-                <v-img src="https://cdn.mos.cms.futurecdn.net/JNJTcXfPoYrQFP6m38gkPn-1200-80.jpg"
+                <v-img :src="article.image"
                     alt="Project Screenshot" class="rounded-lg" cover height="400" />
             </v-col>
             <v-col cols="12" md="5" class="d-flex flex-column justify-start">
-                <h2 class="top-title">Health & Fitness Tracker</h2>
+                <h2 class="top-title pb-4">{{ article.title }}</h2>
                 <div class="d-flex flex-wrap gap-2 mb-4">
                     <v-chip color="primary" variant="tonal">React Native</v-chip>
                     <v-chip color="primary" variant="tonal">Firebase</v-chip>
@@ -30,11 +30,7 @@
         <v-row class="mt-10">
             <v-col>
                 <h3 class="text-h5 font-weight-bold mb-2">Overview</h3>
-                <p class="text-body-1">This health and fitness tracker application provides users with a comprehensive
-                    platform to track their wellness journey. It features workout logging, nutrition tracking with
-                    calorie counting, progress visualization through charts, and integration with health devices. The
-                    app also includes personalized goal setting, social sharing capabilities, and customizable reminders
-                    to help users stay on track.</p>
+                <p class="text-body-1">{{ article.description }}</p>
             </v-col>
         </v-row>
         <v-row class="mt-10">
@@ -66,7 +62,20 @@
     </v-container>
 </template>
 
-<script setup>
+<script setup lang="ts">
+import { AppDetails, type AppDetail } from '@/types/app';
+import { computed, onMounted, ref } from 'vue';
+import { useRoute } from 'vue-router'
+
+const route = useRoute()
+const articles = AppDetails;
+const article = computed(() => articles.find((item) => item.id === parseInt(route.params.id as string)));
+
+onMounted(() => {
+    const id = route.params.id;
+    // article = articles.find((item) => item.id === parseInt(id as string));
+    console.log(article.value)
+})
 const items = [
     {
         src: 'https://cdn.vuetifyjs.com/images/carousel/squirrel.jpg',

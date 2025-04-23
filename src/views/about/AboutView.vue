@@ -37,7 +37,7 @@
         <div class="text-body-2 mb-2">2013 - 2016</div>
         <!-- <div class="text-body-2">
           Focused on software development methodologies and mobile application development. Participated in several
-          hackathons and won Best Mobile App award.
+          hackathon and won Best Mobile App award.
         </div> -->
       </v-card>
     </v-col>
