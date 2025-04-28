@@ -7,7 +7,13 @@
             <h2 class="top-title pt-6">Hello, I'm</h2>
             <h1 class="top-title" style="font-size: 55px;">{{'Saowalak Rungrat'.toUpperCase()}}</h1>
             <div style="margin-top: 20px; width: 50%;">
-              <h2 class="desc">Enthusiastic and fast learning developer with 5+ years of experience in app design and implementation. Working collaboratively with the design, BA, PM, Backend teams to achieve goals, increase revenue gains, increase performance app and UX/UI.</h2>
+              <h2 class="desc">
+                Enthusiastic and fast-learning developer with over 5 years of experience in application 
+                design and development. Skilled at collaborating closely with Designers, Business Analysts (BA), 
+                Project Managers (PM), and Backend teams to deliver high-quality solutions. 
+                Focused on building performant applications with excellent UX/UI, driving revenue growth, 
+                enhancing user engagement, and optimizing overall app performance.
+              </h2>
             </div>
           </div>
         </v-col>
@@ -16,14 +22,17 @@
     <h2 class="featured-title pt-5">Development Categories</h2>
     <ListItem />
     <h2 class="featured-title">Application Development</h2>
-    <GridItem />
+    <GridItem :articles="items"></GridItem>
   </div>
 </template>
 
 <script setup lang="ts">
+import { appDetails } from '@/types/app';
 import GridItem from '../components/GridItem.vue';
 import ListItem from '../components/ListItem.vue';
 import backgroundImage from '@/assets/images/bg.jpg'
+
+const items = appDetails
 </script>
 
 <style scoped>

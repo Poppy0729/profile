@@ -13,7 +13,7 @@
         <h3 class="text-body-1 mb-4" style="color: #00AEEF;">Senior Mobile Developer</h3>
         <p class="text-body-1 mb-4">
           I am a passionate mobile developer with over 5 years of experience creating innovative applications for iOS
-          and Android platforms. With a strong foundation in both design and development, I strive to create seamless
+          and Web platforms. With a strong foundation in both design and development, I strive to create seamless
           and intuitive user experiences that solve real-world problems.
         </p>
       </v-col>
@@ -120,7 +120,7 @@ const approaches = [
   {
     icon: 'mdi-chart-line',
     title: 'Performance Optimization',
-    description: 'I focus on creating fast, responsive apps that work smoothly on all devices.',
+    description: 'Ability to solve complex problems with excellent problem-solving and debugging skills.',
   },
   {
     icon: 'mdi-clock-outline',

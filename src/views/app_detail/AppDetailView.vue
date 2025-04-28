@@ -12,9 +12,7 @@
             <v-col cols="12" md="5" class="d-flex flex-column justify-start">
                 <h2 class="top-title pb-4">{{ article.title }}</h2>
                 <div class="d-flex flex-wrap gap-2 mb-4">
-                    <v-chip color="primary" variant="tonal">React Native</v-chip>
-                    <v-chip color="primary" variant="tonal">Firebase</v-chip>
-                    <v-chip color="primary" variant="tonal">HealthKit</v-chip>
+                    <v-chip  v-for="tag in article.tags" color="primary" variant="tonal">{{ tag }}</v-chip>
                 </div>
 
                 <div class="d-flex gap-4">
@@ -30,7 +28,7 @@
         <v-row class="mt-10">
             <v-col>
                 <h3 class="text-h5 font-weight-bold mb-2">Overview</h3>
-                <p class="text-body-1">{{ article.description }}</p>
+                <p class="text-body-1">{{ article.detail }}</p>
             </v-col>
         </v-row>
         <v-row class="mt-10">
@@ -63,12 +61,12 @@
 </template>
 
 <script setup lang="ts">
-import { AppDetails, type AppDetail } from '@/types/app';
+import { appDetails, type AppDetail } from '@/types/app';
 import { computed, onMounted, ref } from 'vue';
 import { useRoute } from 'vue-router'
 
 const route = useRoute()
-const articles = AppDetails;
+const articles = appDetails;
 const article = computed(() => articles.find((item) => item.id === parseInt(route.params.id as string)));
 
 onMounted(() => {

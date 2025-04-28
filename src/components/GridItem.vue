@@ -1,7 +1,7 @@
 <template>
   <v-container style="max-width: 1000px;">
     <v-row>
-      <v-col v-for="article in articles" :key="article.id" cols="12" sm="6" md="4">
+      <v-col v-for="article in props.articles" :key="article.id" cols="12" sm="6" md="4">
         <v-card class="article-card" @click="router.push({ name: RouterName.AppDetail, params: { id: article.id }})">
           <v-img :src="article.image" height="200px" cover></v-img>
           <v-card-text>
@@ -22,10 +22,12 @@
 
 <script setup lang="ts">
 import router from '@/router';
-import { AppDetails } from '@/types/app';
+import { appDetails, type AppDetail } from '@/types/app';
 import { RouterName } from '@/types/enum/router_name';
 
-const articles = AppDetails
+const props = defineProps<{ 
+  articles: AppDetail[] 
+}>()
 </script>
 
 <style scoped>
